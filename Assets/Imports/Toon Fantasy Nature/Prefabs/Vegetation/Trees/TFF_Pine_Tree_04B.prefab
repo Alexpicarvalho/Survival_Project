@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6889231372287571616}
   - component: {fileID: 6889231372286244480}
   - component: {fileID: 6889231372285146176}
-  - component: {fileID: 1897454090801640263}
   - component: {fileID: 7235318923430941362}
+  - component: {fileID: 1637612393148430394}
   m_Layer: 0
   m_Name: TFF_Pine_Tree_04B
   m_TagString: Untagged
@@ -87,19 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1897454090801640263
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6889231372287404672}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4, y: 28.179644, z: 0.4}
-  m_Center: {x: 0, y: 12.609914, z: 0}
 --- !u!205 &7235318923430941362
 LODGroup:
   m_ObjectHideFlags: 0
@@ -123,6 +110,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3931663583315130974}
   m_Enabled: 1
+--- !u!136 &1637612393148430394
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6889231372287404672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.9
+  m_Height: 29.547518
+  m_Direction: 1
+  m_Center: {x: 0, y: 12.15039, z: 0}
 --- !u!1001 &3931663583317156414
 PrefabInstance:
   m_ObjectHideFlags: 0
