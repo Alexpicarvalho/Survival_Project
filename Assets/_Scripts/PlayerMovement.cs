@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Properties")]
     [SerializeField] private float _startMovementSpeed;
     [SerializeField] private float _maxMovementSpeed;
+    [SerializeField] private float _runningSpeedMultiplier;
+    [SerializeField] private float _stalkingSpeedMultiplier;
     public float _currentMovementSpeed;
     [SerializeField] private float _accelarationPerSecond;
 
@@ -26,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Runtime Properties")]
     [SerializeField] bool _isGrounded;
     private Vector3 _movementDirection;
+    bool _isRunning;
+    bool _isStalking;
 
     private void Awake()
     {
@@ -35,6 +39,17 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         CheckGrounded();
+        if(new Vector2(_movementDirection.x, _movementDirection.z).magnitude >= 0.1f)
+        {
+            _currentMovementSpeed += _accelarationPerSecond * Time.deltaTime;
+            _currentMovementSpeed = Mathf.Clamp(
+                _currentMovementSpeed, 
+                _startMovementSpeed, 
+                _maxMovementSpeed
+                );
+
+        }
+        else _currentMovementSpeed = _startMovementSpeed;
     }
 
     public void ProcessMovement(Vector2 input)
@@ -50,7 +65,29 @@ public class PlayerMovement : MonoBehaviour
         }
         if(_isGrounded && _movementDirection.y < 0) _movementDirection.y = -10f;
 
-        _playerController.Move(_currentMovementSpeed * Time.deltaTime * transform.TransformDirection(_movementDirection));
+
+        float speed = CalculateSpeed();
+
+        _playerController.Move(speed * Time.deltaTime * transform.TransformDirection(_movementDirection));
+    }
+
+    public float CalculateSpeed()
+    {
+        if (_isStalking) return _currentMovementSpeed * _stalkingSpeedMultiplier;
+        else if (_isRunning) return _currentMovementSpeed * _runningSpeedMultiplier;
+        else return _currentMovementSpeed;
+    }
+
+    public void IsRunning(bool isRunning)
+    {
+        if (isRunning) _isRunning = true;
+        else _isRunning = false;
+    }
+
+    public void IsStalking(bool isStalking)
+    {
+        if (isStalking) _isStalking = true;
+        else _isStalking = _isStalking = false;
     }
 
     public void Jump()

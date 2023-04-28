@@ -16,6 +16,10 @@ public class InputManager : MonoBehaviour
         _playerInput = new PlayerInput();
         _onFoot = _playerInput.OnFoot;
         _onFoot.Jump.performed += ctx => _playerMovement.Jump();
+        _onFoot.Run.performed += ctx => _playerMovement.IsRunning(true);
+        _onFoot.Run.canceled += ctx => _playerMovement.IsRunning(false);
+        _onFoot.Stalk.performed += ctx => _playerMovement.IsStalking(true);
+        _onFoot.Stalk.canceled += ctx => _playerMovement.IsStalking(false);
     }
 
     private void FixedUpdate()
