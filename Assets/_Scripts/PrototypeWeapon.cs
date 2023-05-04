@@ -12,10 +12,14 @@ public class PrototypeWeapon : MonoBehaviour
     public float _bulletsPerMinute;
     private float _timeBetweenShots;
     private float _timeSinceLastShot = 0f;
+    private RecoilScript _recoil;
+    private Animator _anim;
     // Start is called before the first frame update
     void Start()
     {
         _timeBetweenShots = 60 / _bulletsPerMinute;
+        _recoil = Camera.main.GetComponentInParent<RecoilScript>();
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,9 +33,21 @@ public class PrototypeWeapon : MonoBehaviour
 
     private void Fire()
     {
+        _recoil.AddRecoil();
+        _anim.SetTrigger("Fire");
         _timeSinceLastShot = 0;
-        Instantiate(_bullet, _firePoint.position, Quaternion.LookRotation(Camera.main.transform.forward));
+        Instantiate(_bullet, _firePoint.position, Quaternion.LookRotation(GetFireRotation()));
         var mf = Instantiate(_muzzleFlash, _firePoint.position, Quaternion.LookRotation(Camera.main.transform.forward),_firePoint);
         Destroy(mf, 2.0f);
+    }
+
+    Vector3 GetFireRotation()
+    {
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward,
+            out RaycastHit hit, Mathf.Infinity))
+        {
+            return hit.point - _firePoint.position;
+        }
+        else return Camera.main.transform.forward;
     }
 }

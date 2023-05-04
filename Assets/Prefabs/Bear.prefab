@@ -31,6 +31,8 @@ Transform:
   - {fileID: 1415721273739863298}
   - {fileID: 5305783184347445405}
   - {fileID: 8463796861847541373}
+  - {fileID: 8201433507094499262}
+  - {fileID: 3143818065500050410}
   m_Father: {fileID: 2306520861880167523}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -522,13 +524,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013932483582769757}
-  m_LocalRotation: {x: 0.6550912, y: 0.75518435, z: -0.019294707, w: -0.013409954}
-  m_LocalPosition: {x: 0.013586761, y: 0.30118996, z: 0.46754184}
+  m_LocalRotation: {x: 0.6424947, y: 0.7659298, z: -0.019514142, w: -0.013088575}
+  m_LocalPosition: {x: 1.0843458, y: 0.35093066, z: 0.46754548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2373500778897436350}
-  m_RootOrder: 5
+  m_Father: {fileID: 6005839942744369515}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1680318577392733397
 CapsuleCollider:
@@ -557,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderType: 0
-  _thickness: 0
+  _thickness: 1
 --- !u!1 &2102154987016729500
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,8 +810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71766e4ab7d304240a60e021e5cee35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderType: 0
-  _thickness: 0
+  colliderType: 4
+  _thickness: 0.8
 --- !u!1 &2855372002467560629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1235,7 @@ GameObject:
   - component: {fileID: 7511466540076545683}
   - component: {fileID: 8554278485775195378}
   - component: {fileID: 6595515102902940326}
+  - component: {fileID: 2048942472966401471}
   m_Layer: 0
   m_Name: MainCollider
   m_TagString: Untagged
@@ -1265,10 +1268,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 2.2
+  m_Radius: 0.66
+  m_Height: 1.44
   m_Direction: 0
-  m_Center: {x: -0.62, y: 0.3, z: 0}
+  m_Center: {x: -0.87, y: 0.3, z: 0}
 --- !u!114 &6595515102902940326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,8 +1284,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71766e4ab7d304240a60e021e5cee35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderType: 0
-  _thickness: 0
+  colliderType: 4
+  _thickness: 0.8
+--- !u!136 &2048942472966401471
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5219240525837342103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.47
+  m_Height: 1.09
+  m_Direction: 2
+  m_Center: {x: -0.03, y: 0.27, z: 0}
 --- !u!1 &5502610276333292227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,8 +2307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71766e4ab7d304240a60e021e5cee35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderType: 0
-  _thickness: 0
+  colliderType: 2
+  _thickness: 0.5
 --- !u!1 &7939450312501421830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,13 +2492,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9026351847790770818}
-  m_LocalRotation: {x: 0.6550912, y: 0.75518435, z: -0.019294707, w: -0.013409954}
-  m_LocalPosition: {x: 0.013586761, y: 0.30118996, z: 0.46754184}
+  m_LocalRotation: {x: 0.6424947, y: 0.7659298, z: -0.019514142, w: -0.013088575}
+  m_LocalPosition: {x: 1.0843458, y: 0.35093066, z: 0.46754548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2373500778897436350}
-  m_RootOrder: 6
+  m_Father: {fileID: 6005839942744369515}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &7338161139756466943
 CapsuleCollider:
@@ -2509,8 +2526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71766e4ab7d304240a60e021e5cee35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderType: 0
-  _thickness: 0
+  colliderType: 1
+  _thickness: 1
 --- !u!1 &9031023990122942793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,8 +2592,6 @@ Transform:
   - {fileID: 4899594220652636065}
   - {fileID: 8547002672214238690}
   - {fileID: 7511466540076545683}
-  - {fileID: 8201433507094499262}
-  - {fileID: 3143818065500050410}
   m_Father: {fileID: 7127575512927538302}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

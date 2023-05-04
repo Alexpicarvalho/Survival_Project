@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump Properties")]
     [SerializeField] float _jumpHeight;
+    [SerializeField] float _jumpSpeed;
     [SerializeField] float _groundCheckRaycastDistance;
     [SerializeField] LayerMask _whatIsGround = ~0;
     [SerializeField] float _airControlPercentage = 1;
@@ -57,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         _movementDirection.x = input.x;
         _movementDirection.z = input.y;
         _movementDirection.y += _gravity * Time.deltaTime;
+        float speed = CalculateSpeed();
 
         if (!_isGrounded)
         {
@@ -65,8 +67,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if(_isGrounded && _movementDirection.y < 0) _movementDirection.y = -10f;
 
-
-        float speed = CalculateSpeed();
 
         _playerController.Move(speed * Time.deltaTime * transform.TransformDirection(_movementDirection));
     }

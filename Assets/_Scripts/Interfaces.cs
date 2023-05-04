@@ -21,3 +21,22 @@ public interface IPickupable
 {
     public abstract void PickUp();
 }
+
+public class HitInfo
+{
+    public float amount { get; set; }
+    public RaycastHit hit { get; set; }
+    public Collision collision { get; set; }
+
+    public HitInfo(float amount, RaycastHit hit)
+    {
+        this.amount = amount;
+        this.hit = hit;
+    }
+
+    public HitInfo(float amount, Collision collision)
+    {
+        this.amount = amount;
+        this.collision = collision;
+    }
+}
