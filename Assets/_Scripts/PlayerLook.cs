@@ -13,6 +13,8 @@ public class PlayerLook : MonoBehaviour
 
     [Header("Values")]
     private float xRotation = 0f;
+    public float viewX;
+    public float viewY;
 
     private void Awake()
     {
@@ -22,8 +24,8 @@ public class PlayerLook : MonoBehaviour
 
     public void ProcessLook(Vector2 input)
     {
-        float viewX = input.x;
-        float viewY = input.y;
+        viewX = input.x;
+        viewY = input.y;
 
         xRotation -= viewY * Time.deltaTime * _cameraSensitivity;
         xRotation = Mathf.Clamp(xRotation, -_lookClamp, _lookClamp);

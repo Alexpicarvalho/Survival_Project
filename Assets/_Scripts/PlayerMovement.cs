@@ -26,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _playerController;
 
     [Header("Runtime Properties")]
-    [SerializeField] bool _isGrounded;
-    private Vector3 _movementDirection;
-    bool _isRunning;
-    bool _isStalking;
+    [SerializeField] public bool _isGrounded;
+    public Vector3 _movementDirection;
+    public bool _isRunning;
+    public bool _isStalking;
 
     private void Awake()
     {
@@ -100,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.down,out RaycastHit hit, _groundCheckRaycastDistance, _whatIsGround))
         {
             _isGrounded = true;
-            Debug.Log("Hitting : " + hit.transform.name);
         } 
         else _isGrounded = false;
 
