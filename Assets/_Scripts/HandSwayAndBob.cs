@@ -50,7 +50,7 @@ public class HandSwayAndBob : MonoBehaviour
         GetInput();
 
         Sway();
-        //SwayRotation();
+        SwayRotation();
         BobOffset();
         BobRotation();
 

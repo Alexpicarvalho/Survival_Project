@@ -14,12 +14,20 @@ public class PrototypeWeapon : MonoBehaviour
     private float _timeSinceLastShot = 0f;
     private RecoilScript _recoil;
     private Animator _anim;
+    private PlayerLook _playerLook;
+    private HandSwayAndBob _handSwayAndBob;
+
+    public Vector3 _aimPosition;
+    public Vector3 _aimRotation;
+    public float _aimLerpDuration;
     // Start is called before the first frame update
     void Start()
     {
         _timeBetweenShots = 60 / _bulletsPerMinute;
         _recoil = Camera.main.GetComponentInParent<RecoilScript>();
         _anim = GetComponent<Animator>();
+        _playerLook = GetComponentInParent<PlayerLook>();
+        _handSwayAndBob = GetComponentInParent<HandSwayAndBob>();
     }
 
     // Update is called once per frame
@@ -28,8 +36,56 @@ public class PrototypeWeapon : MonoBehaviour
         _timeSinceLastShot += Time.deltaTime;
         if (Mouse.current.leftButton.IsPressed() && _timeSinceLastShot >= _timeBetweenShots) Fire();
 
+        if (Mouse.current.rightButton.wasPressedThisFrame) Aim(true);
+        else if(Mouse.current.rightButton.wasReleasedThisFrame) Aim(false);
+
 
     }
+
+    private void Aim(bool toogle)
+    {
+        if (toogle)
+        {
+            _handSwayAndBob.enabled = false;
+            StartCoroutine(LerpAim());
+            _playerLook.Aim(true, _aimLerpDuration);
+
+        }
+        else
+        {
+            StartCoroutine(LerpResetAim());
+            _handSwayAndBob.enabled = true;
+            _playerLook.Aim(false, _aimLerpDuration);
+
+        }
+    }
+
+    IEnumerator LerpAim()
+    {
+        float timeElapsed = 0;
+        while (timeElapsed < _aimLerpDuration)
+        {
+            transform.parent.localPosition = Vector3.Lerp(Vector3.zero, _aimPosition, timeElapsed / _aimLerpDuration);
+            transform.parent.localRotation = Quaternion.Lerp(Quaternion.identity, Quaternion.Euler(_aimRotation), timeElapsed / _aimLerpDuration);
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+    }
+    IEnumerator LerpResetAim()
+    {
+        float timeElapsed = 0;
+        while (timeElapsed < _aimLerpDuration)
+        {
+            transform.parent.localPosition = Vector3.Lerp(_aimPosition, Vector3.zero, timeElapsed / _aimLerpDuration);
+            transform.parent.localRotation = Quaternion.Lerp(Quaternion.Euler(_aimRotation),Quaternion.identity, timeElapsed / _aimLerpDuration);
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+    }
+
+
 
     private void Fire()
     {
@@ -37,7 +93,7 @@ public class PrototypeWeapon : MonoBehaviour
         _anim.SetTrigger("Fire");
         _timeSinceLastShot = 0;
         Instantiate(_bullet, _firePoint.position, Quaternion.LookRotation(GetFireRotation()));
-        var mf = Instantiate(_muzzleFlash, _firePoint.position, Quaternion.LookRotation(Camera.main.transform.forward),_firePoint);
+        var mf = Instantiate(_muzzleFlash, _firePoint.position, Quaternion.LookRotation(Camera.main.transform.forward), _firePoint);
         Destroy(mf, 2.0f);
     }
 
