@@ -1282,12 +1282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c731824768a514ca18d8ab16275aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_maxHp>k__BackingField: 100
+  <_maxHp>k__BackingField: 9999
   <_maxStamina>k__BackingField: 0
   <_staminaRegen>k__BackingField: 0
   <_vitalProtection>k__BackingField: 0
   <_nonVitalProtection>k__BackingField: 0
-  <_currentHp>k__BackingField: 100
+  <_currentHp>k__BackingField: 9999
   <_currentStamina>k__BackingField: 0
 --- !u!1 &1741491279
 GameObject:
@@ -1832,6 +1832,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 325846491, guid: a32e72ad79d96de43bb38c27f1919a13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0482
+      objectReference: {fileID: 0}
+    - target: {fileID: 325846491, guid: a32e72ad79d96de43bb38c27f1919a13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1555
+      objectReference: {fileID: 0}
+    - target: {fileID: 325846491, guid: a32e72ad79d96de43bb38c27f1919a13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.9923
+      objectReference: {fileID: 0}
     - target: {fileID: 2026207999, guid: a32e72ad79d96de43bb38c27f1919a13, type: 3}
       propertyPath: _aimPosition.x
       value: -0.089
@@ -3346,7 +3358,7 @@ PrefabInstance:
       objectReference: {fileID: 1242828678}
     - target: {fileID: 6721769908919709374, guid: a32e72ad79d96de43bb38c27f1919a13, type: 3}
       propertyPath: _cameraSensitivity
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6725586355997889845, guid: a32e72ad79d96de43bb38c27f1919a13, type: 3}
       propertyPath: m_LocalScale.x
@@ -4095,7 +4107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 955951294669660291, guid: f0d24021dd522c44e9c299c3ba2c08ef, type: 3}
       propertyPath: _thickness
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1518058132931741274, guid: f0d24021dd522c44e9c299c3ba2c08ef, type: 3}
       propertyPath: m_Name

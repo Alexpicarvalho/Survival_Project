@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 991775376099913203}
   - component: {fileID: 4327867841300298619}
   - component: {fileID: 3831623886728138620}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ParticlesAdd (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 3703765275162443938}
   - component: {fileID: 3582495764019342208}
   - component: {fileID: 3581143864137108578}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9594,7 +9594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3709246347394594322}
   - component: {fileID: -4108157743852990200}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: vfx_Muzzle_Arrow01_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9659,7 +9659,7 @@ GameObject:
   - component: {fileID: 3708759579444521282}
   - component: {fileID: 3582527930560411978}
   - component: {fileID: 3581245365883031132}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: BeamAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14343,7 +14343,7 @@ GameObject:
   - component: {fileID: 4353871952660898100}
   - component: {fileID: 8763937110755786355}
   - component: {fileID: 4846721733567763455}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ParticleAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
