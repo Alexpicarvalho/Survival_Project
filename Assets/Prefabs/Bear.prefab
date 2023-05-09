@@ -548,6 +548,7 @@ MonoBehaviour:
   <_nonVitalProtection>k__BackingField: 0
   <_currentHp>k__BackingField: 9999
   <_currentStamina>k__BackingField: 0
+  _ragdoll: 0
 --- !u!195 &1580894004
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2835,8 +2836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71766e4ab7d304240a60e021e5cee35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderType: 2
-  _thickness: 0.2
+  colliderType: 0
+  _thickness: 1
 --- !u!136 &2609340108893561270
 CapsuleCollider:
   m_ObjectHideFlags: 0

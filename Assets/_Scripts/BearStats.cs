@@ -6,6 +6,7 @@ using UnityEngine;
 public class BearStats : Stats
 {
     public bool _ragdoll = false;
+    public bool _dead = false;
 
     public override void TakeDamage(float amount)
     {
@@ -20,6 +21,7 @@ public class BearStats : Stats
 
     private void Die()
     {
+        _dead = true;
         if (!_ragdoll) GetComponent<Animator>().SetTrigger("Die");
         else RagdollBehaviour();
     }

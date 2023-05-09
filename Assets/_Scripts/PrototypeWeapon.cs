@@ -94,7 +94,7 @@ public class PrototypeWeapon : MonoBehaviour
         _timeSinceLastShot = 0;
         Instantiate(_bullet, _firePoint.position, Quaternion.LookRotation(GetFireRotation()));
         var mf = Instantiate(_muzzleFlash, _firePoint.position, Quaternion.LookRotation(Camera.main.transform.forward), _firePoint);
-        Destroy(mf, 2.0f);
+        Destroy(mf, 1.0f);
     }
 
     Vector3 GetFireRotation()

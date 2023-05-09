@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5603976604370778575}
   - component: {fileID: 5651409049428665124}
   - component: {fileID: 6928090641139341489}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ImpactRingAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4856,7 +4856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3020169754877658201}
   - component: {fileID: 2822148391826834566}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: vfx_Hit_Arrow01_Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 3024091395724870365}
   - component: {fileID: 3109337230208365195}
   - component: {fileID: 3108514706053882347}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9775,7 +9775,7 @@ GameObject:
   - component: {fileID: 9049396463543705322}
   - component: {fileID: 7964103750096865651}
   - component: {fileID: 1222577758000721540}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14621,7 +14621,7 @@ GameObject:
   - component: {fileID: 2290177552580343917}
   - component: {fileID: 2298707109391666622}
   - component: {fileID: 298095509579907120}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ImpactRingAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19467,7 +19467,7 @@ GameObject:
   - component: {fileID: 7540788199359476587}
   - component: {fileID: 8066214289102813755}
   - component: {fileID: 3860591469411389769}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BeamAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24151,7 +24151,7 @@ GameObject:
   - component: {fileID: 5949379101755997750}
   - component: {fileID: 4557586004783126179}
   - component: {fileID: 5882994354454327806}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ParticlesImpactAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29051,7 +29051,7 @@ GameObject:
   - component: {fileID: 4770246218487023709}
   - component: {fileID: 6142575963049575947}
   - component: {fileID: 8325718471290100186}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33897,7 +33897,7 @@ GameObject:
   - component: {fileID: 178377628707410953}
   - component: {fileID: 7805154332474249580}
   - component: {fileID: 1617355838819790262}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ParticlesImpactAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
