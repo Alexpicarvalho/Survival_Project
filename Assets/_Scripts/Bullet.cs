@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     List<Collider> _alreadyHitColliders = new List<Collider>();
 
     private float _totalThicknessHit = 0;
-
+    public bool _spawnImpact = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +40,7 @@ public class Bullet : MonoBehaviour
             if (_alreadyHitColliders.Contains(hit.collider)) return;
 
             colliderInfo1 = hit.collider.transform.GetComponent<ColliderInfo>();
-            Instantiate(_impact, transform.position, Quaternion.LookRotation(hit.normal));
+            if (_spawnImpact) Instantiate(_impact, transform.position, Quaternion.LookRotation(hit.normal));
             if (rb.useGravity) rb.useGravity = false;
             _alreadyHitColliders.Add(hit.collider);
             Debug.Log("Hit " + hit.collider.name);
@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour
             if (_alreadyHitColliders.Contains(hit1.collider)) return;
 
             colliderInfo2 = hit1.collider.transform.GetComponent<ColliderInfo>();
-            Instantiate(_impact, transform.position, Quaternion.LookRotation(hit1.normal));
+            if(_spawnImpact) Instantiate(_impact, transform.position, Quaternion.LookRotation(hit1.normal));
             if (rb.useGravity) rb.useGravity = false;
             _alreadyHitColliders.Add(hit1.collider);
             Debug.Log("Hit " + hit1.collider.name);

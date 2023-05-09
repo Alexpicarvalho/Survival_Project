@@ -105,9 +105,9 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, Vector3.down * _groundCheckRaycastDistance);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawRay(transform.position, Vector3.down * _groundCheckRaycastDistance);
+    //}
 }

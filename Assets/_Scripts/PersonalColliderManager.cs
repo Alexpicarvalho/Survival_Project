@@ -7,6 +7,9 @@ public class PersonalColliderManager : MonoBehaviour
     private List<ColliderInfo> _myColliders = new List<ColliderInfo>();
     private Stats _stats;
 
+    [Header("Temp")]
+    public GameObject _bleed;
+
     private void Start()
     {
         _stats = GetComponent<Stats>();
@@ -26,5 +29,7 @@ public class PersonalColliderManager : MonoBehaviour
     {
         if (_myColliders[colliderIndex].colliderType == ColliderType.OneShotVital) _stats.TakeDamage(9999);
         else _stats.TakeDamage(hitInfo.amount);
+
+        var blood = Instantiate(_bleed,hitInfo.hit.point, Quaternion.LookRotation(hitInfo.hit.normal));
     }
 }

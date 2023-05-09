@@ -6,6 +6,7 @@ public class Interfaces
 {
 }
 
+
 public interface IDamageable
 {
     public abstract void TakeDamage(float amount);
@@ -14,7 +15,7 @@ public interface IDamageable
 
 public interface IGatherable
 {
-    public abstract void Gather();
+    public abstract void Gather(HitInfo hitInfo);
 }
 
 public interface IPickupable
