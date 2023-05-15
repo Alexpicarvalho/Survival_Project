@@ -317,7 +317,7 @@ public class GrassComputeScript : MonoBehaviour
     {
 
         interactors = (ShaderInteractor[])FindObjectsOfType(typeof(ShaderInteractor));
-        
+
         // Send things to compute shader that dont need to be set every frame
         m_InstantiatedComputeShader.SetMatrix("_LocalToWorld", transform.localToWorldMatrix);
         m_InstantiatedComputeShader.SetFloat("_Time", Time.time);
@@ -369,7 +369,7 @@ public class GrassComputeScript : MonoBehaviour
             for (int i = 0; i < interactors.Length; i++)
             {
                 positions[i] = interactors[i].transform.position;
- 				positions[i].w = interactors[i].radius;
+                positions[i].w = interactors[i].radius;
 
             }
             int shaderID = Shader.PropertyToID("_PositionsMoving");

@@ -147,11 +147,11 @@ public class AxeGather : MonoBehaviour
         Instantiate(_hitParticle, _hitPosition, Quaternion.LookRotation(_hitNormal));
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(_camera.transform.position, _camera.transform.forward * _forwardRaycastDistance);
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawRay(_camera.transform.position, _camera.transform.forward * _forwardRaycastDistance);
 
-        if (_hitTree) Gizmos.DrawRay(_rightSidePointer.transform.position, -_camera.transform.right * _backToTreeRayDistance);
-    }
+    //    if (_hitTree) Gizmos.DrawRay(_rightSidePointer.transform.position, -_camera.transform.right * _backToTreeRayDistance);
+    //}
 }

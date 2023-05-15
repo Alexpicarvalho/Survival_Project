@@ -212,7 +212,6 @@ public class GrassPainter : MonoBehaviour
                         // place based on density
                         for (int k = 0; k < density * brushSize; k++)
                         {
-
                             // brushrange
                             float t = 2f * Mathf.PI * Random.Range(0f, brushSize);
                             float u = Random.Range(0f, brushSize) + Random.Range(0f, brushSize);
@@ -407,9 +406,11 @@ public class GrassPainter : MonoBehaviour
 
     void RebuildMesh()
     {
+        
         if (mesh == null)
         {
             mesh = new Mesh();
+            mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
         }
         mesh.Clear();
         mesh.SetVertices(positions);
