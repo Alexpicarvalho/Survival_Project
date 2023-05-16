@@ -6,7 +6,6 @@ public class Interfaces
 {
 }
 
-
 public interface IDamageable
 {
     public abstract void TakeDamage(float amount);
