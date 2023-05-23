@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; 
 
 public class GatherableTree : MonoBehaviour, IGatherable
 {
@@ -13,6 +13,10 @@ public class GatherableTree : MonoBehaviour, IGatherable
     bool _readyToBreak;
     public GameObject _breakParts;
     public GameObject _breakVFX;
+    public ParticleSystem _hitVFX;
+
+
+
     public int _breakPartsToSpawn;
     public LayerMask _breakCollisionLayers;
 
@@ -48,6 +52,7 @@ public class GatherableTree : MonoBehaviour, IGatherable
 
     public void Gather(HitInfo info)
     {
+        _hitVFX.Play();
         _currentHits++;
         if (_currentHits == _hitsToFall) Fall(info);
     }
@@ -56,8 +61,9 @@ public class GatherableTree : MonoBehaviour, IGatherable
     {
         _rb.isKinematic = false;
         _readyToBreak = true;
-        _rb.AddForce(info.hit.normal * -2000);
-        _rb.AddTorque(info.hit.normal * -100);
+        _rb.AddForce(info.hit.normal * -1000000);
+        //_rb.AddForce(Vector3.up * -1000000000);
+        _rb.AddTorque(info.hit.normal * -10000);
     }
 
     private void OnDrawGizmos()
