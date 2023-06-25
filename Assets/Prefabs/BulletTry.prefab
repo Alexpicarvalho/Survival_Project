@@ -362,7 +362,7 @@ CapsuleCollider:
   m_Radius: 0.01
   m_Height: 0.06659159
   m_Direction: 2
-  m_Center: {x: 0.016704202, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1048139914980047597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe360198f66d053478bcd3035cafb88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 2000
+  _force: 4000
   _impact: {fileID: 3017430761128806937, guid: 9b706d5f9d592a445811c8d84d214c62, type: 3}
   _forwardRaycastDistance: 0.6
   _backwardsRaycastDistance: 0.5

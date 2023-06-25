@@ -7,6 +7,7 @@ Shader "Custom/GrassComputeHLSL"
         _AmbientAdjustment("Ambient Adjustment", Range(-1,10)) = 0
     }
     
+
     HLSLINCLUDE
     // Include some helper functions
     #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
@@ -112,6 +113,11 @@ Shader "Custom/GrassComputeHLSL"
             #else
                 Light mainLight = GetMainLight();
             #endif
+    
+            //Look At Camera
+            float3 _WorldSpaceCameraPos;
+    
+            
             
             // extra point lights support
             float3 extraLights;
@@ -169,6 +175,7 @@ Shader "Custom/GrassComputeHLSL"
             Name "ForwardLit"
             Tags { "LightMode" = "UniversalForward" }
             Cull Off // No culling since the grass must be double sided
+
             
             HLSLPROGRAM
             // Signal this shader requires a compute buffer
@@ -187,6 +194,7 @@ Shader "Custom/GrassComputeHLSL"
             // Register our functions
             #pragma vertex vert
             #pragma fragment frag
+
             
             ENDHLSL
         }

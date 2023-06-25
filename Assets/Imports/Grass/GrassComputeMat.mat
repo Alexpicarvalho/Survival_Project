@@ -22,8 +22,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _AmbientAdjustment: 10
+    - _AmbientAdjustment: 2.84
     - _BlendFloor: 0
-    - _Fade: -0.01
+    - _Fade: -0.02
     m_Colors: []
   m_BuildTextureStacks: []
