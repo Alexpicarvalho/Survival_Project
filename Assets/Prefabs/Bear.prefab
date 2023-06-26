@@ -238,6 +238,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &931714673318450588
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +304,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &1092844784703904856
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09765b7a423b31041a54fcdb93c88dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bleed: {fileID: 3730029514053188332, guid: 84da211865861e54f971fba337f5c99e, type: 3}
 --- !u!54 &1580894003
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -549,6 +556,7 @@ MonoBehaviour:
   <_currentHp>k__BackingField: 9999
   <_currentStamina>k__BackingField: 0
   _ragdoll: 0
+  _dead: 0
 --- !u!195 &1580894004
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -632,6 +640,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &1944270024876894955
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +739,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 0
   _thickness: 1
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!135 &4230006881914300952
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -960,6 +976,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &2546184378238873628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1042,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.8
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &2855372002467560629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &3552895519748802030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1268,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 0
   _thickness: 1
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &3943135840794059527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1365,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &4893476143164962817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,6 +1590,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.8
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!136 &2048942472966401471
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1725,6 +1765,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &5970556409197926611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,6 +1893,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &6286894201988685792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2121,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &6385475235267532461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,6 +2517,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &7293759535771255897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,6 +2821,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &7934025543772041219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,6 +2898,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 0
   _thickness: 1
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!136 &2609340108893561270
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2913,6 +2977,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 4
   _thickness: 0.7
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &8185679508982763270
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,6 +3168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 1
   _thickness: 1
+  _impactReaction: {fileID: 11400000, guid: 63535eb568e278a4a8048ce32eb207ca, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
 --- !u!1 &9031023990122942793
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4d8fc283bf1f74fa5d53e0b543f273, type: 3}
   m_Name: Status
   m_EditorClassIdentifier: 
-  statusType: 0
+  _statusType: 0
+  _statusPolarity: 1
+  _statusIntensity: 0
+  _isActive: 0

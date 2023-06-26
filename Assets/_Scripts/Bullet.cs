@@ -43,12 +43,12 @@ public class Bullet : MonoBehaviour
             if (_spawnImpact) Instantiate(_impact, transform.position, Quaternion.LookRotation(hit.normal));
             if (rb.useGravity) rb.useGravity = false;
             _alreadyHitColliders.Add(hit.collider);
-            Debug.Log("Hit " + hit.collider.name);
+            //Debug.Log("Hit " + hit.collider.name);
         }
 
         if (colliderInfo1)
         {
-            Debug.Log("ENTREI 1");
+            //Debug.Log("ENTREI 1");
             colliderInfo1.Hit(new HitInfo(10, hit));
             _totalThicknessHit += colliderInfo1._thickness;
             if (_totalThicknessHit >= 1) Destroy(gameObject);
@@ -62,12 +62,12 @@ public class Bullet : MonoBehaviour
             if(_spawnImpact) Instantiate(_impact, transform.position, Quaternion.LookRotation(hit1.normal));
             if (rb.useGravity) rb.useGravity = false;
             _alreadyHitColliders.Add(hit1.collider);
-            Debug.Log("Hit " + hit1.collider.name);
+            //Debug.Log("Hit " + hit1.collider.name);
         }
 
         if (colliderInfo2)
         {
-            Debug.Log("ENTREI 2");
+            //Debug.Log("ENTREI 2");
             colliderInfo2.Hit(new HitInfo(1, hit1));
             _totalThicknessHit += colliderInfo2._thickness;
             if (_totalThicknessHit >= 1) Destroy(gameObject);

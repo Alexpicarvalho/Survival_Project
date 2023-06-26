@@ -7,9 +7,6 @@ public class PersonalColliderManager : MonoBehaviour
     private List<ColliderInfo> _myColliders = new List<ColliderInfo>();
     private Stats _stats;
 
-    [Header("Temp")]
-    public GameObject _bleed;
-
     private void Start()
     {
         _stats = GetComponent<Stats>();
@@ -28,8 +25,10 @@ public class PersonalColliderManager : MonoBehaviour
     public void HitMessage(int colliderIndex, HitInfo hitInfo)
     {
         if (_myColliders[colliderIndex].colliderType == ColliderType.OneShotVital) _stats.TakeDamage(9999);
-        else _stats.TakeDamage(hitInfo.amount);
+        else if(_stats) _stats.TakeDamage(hitInfo.amount);
 
-        var blood = Instantiate(_bleed,hitInfo.hit.point, Quaternion.LookRotation(hitInfo.hit.normal));
+        Debug.Log("Spawning impact VFX");
+        var impactVFX = Instantiate(_myColliders[colliderIndex].GetImpactVFX(),hitInfo.hit.point, Quaternion.LookRotation(hitInfo.hit.normal));
+        //var impactSFX = 
     }
 }
