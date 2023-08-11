@@ -20,9 +20,14 @@ public class PrototypeWeapon : MonoBehaviour
     public Vector3 _aimPosition;
     public Vector3 _aimRotation;
     public float _aimLerpDuration;
+
+    [Header("Audio")]
+    private AudioSource _audioSource;
+    public AudioClip _shotSound;
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _timeBetweenShots = 60 / _bulletsPerMinute;
         _recoil = Camera.main.GetComponentInParent<RecoilScript>();
         _anim = GetComponent<Animator>();
@@ -34,7 +39,7 @@ public class PrototypeWeapon : MonoBehaviour
     void Update()
     {
         _timeSinceLastShot += Time.deltaTime;
-        if (Mouse.current.leftButton.IsPressed() && _timeSinceLastShot >= _timeBetweenShots) Fire();
+        if (Mouse.current.leftButton.IsPressed() && _timeSinceLastShot >= 60/_bulletsPerMinute /*_timeBetweenShots*/) Fire();
 
         if (Mouse.current.rightButton.wasPressedThisFrame) Aim(true);
         else if(Mouse.current.rightButton.wasReleasedThisFrame) Aim(false);
@@ -94,6 +99,7 @@ public class PrototypeWeapon : MonoBehaviour
         _timeSinceLastShot = 0;
         Instantiate(_bullet, _firePoint.position, Quaternion.LookRotation(GetFireRotation()));
         var mf = Instantiate(_muzzleFlash, _firePoint.position, Quaternion.LookRotation(Camera.main.transform.forward), _firePoint);
+        _audioSource.PlayOneShot(_shotSound);
         Destroy(mf, 1.0f);
     }
 

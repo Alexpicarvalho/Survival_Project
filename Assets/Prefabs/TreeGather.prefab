@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2059903614}
   - component: {fileID: 2059903613}
   - component: {fileID: 2059903616}
+  - component: {fileID: 1698188172}
   m_Layer: 11
   m_Name: TreeGather
   m_TagString: Untagged
@@ -179,6 +180,7 @@ MonoBehaviour:
   _hitsToFall: 3
   _breakParts: {fileID: 784655582741724660, guid: 87bd44ce24e2c2545a7f7fbb18a1f24c, type: 3}
   _breakVFX: {fileID: 8817526958043461461}
+  _hitVFX: {fileID: 0}
   _breakPartsToSpawn: 3
   _breakCollisionLayers:
     serializedVersion: 2
@@ -197,6 +199,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderType: 5
   _thickness: 1
+  _impactReaction: {fileID: 11400000, guid: 945b654caefee9b4390d35dc30af09c2, type: 2}
+  _customImpact: 0
+  _customImpactVFX: {fileID: 0}
+  _customImpactSFX: {fileID: 0}
+--- !u!114 &1698188172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4589559278314222996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09765b7a423b31041a54fcdb93c88dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3407995201799088451
 PrefabInstance:
   m_ObjectHideFlags: 0

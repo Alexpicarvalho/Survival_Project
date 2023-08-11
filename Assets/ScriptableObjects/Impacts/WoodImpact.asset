@@ -15,4 +15,8 @@ MonoBehaviour:
   _materialType: 
   _impactVFXs:
   - {fileID: 8942064444371851601, guid: b44f1099c878db747b5d0f02c70979b3, type: 3}
-  _impactSFXs: []
+  _impactSFXs:
+  - {fileID: 8300000, guid: ef66ad2ab353b7545a7869a8338c5272, type: 3}
+  - {fileID: 8300000, guid: 02c3bdd39b8726246ac56bfca242f28b, type: 3}
+  - {fileID: 8300000, guid: df2a6c3aec25f554cb4f39a93b234856, type: 3}
+  - {fileID: 8300000, guid: 040ac272c32702644a83f3a7f1fa7366, type: 3}

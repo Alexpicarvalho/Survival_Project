@@ -15,4 +15,8 @@ MonoBehaviour:
   _materialType: Flesh
   _impactVFXs:
   - {fileID: 3730029514053188332, guid: 84da211865861e54f971fba337f5c99e, type: 3}
-  _impactSFXs: []
+  _impactSFXs:
+  - {fileID: 8300000, guid: 4efc7a17b2bb4b54cb6438120b165080, type: 3}
+  - {fileID: 8300000, guid: 0cf45d2cdda91f24dbe5672f9d02e4f1, type: 3}
+  - {fileID: 8300000, guid: 0285a9e0dc14e80458e68d824a85edec, type: 3}
+  - {fileID: 8300000, guid: 0b6ed72ca31eace45976f1718b371831, type: 3}

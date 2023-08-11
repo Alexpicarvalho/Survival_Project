@@ -32,6 +32,7 @@ public class HitInfo
     {
         this.amount = amount;
         this.hit = hit;
+        this.collision = null;
     }
 
     public HitInfo(float amount, Collision collision)

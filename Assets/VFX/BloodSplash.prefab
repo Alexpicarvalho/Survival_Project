@@ -3846,7 +3846,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 1024
+      m_Bits: 1088
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -6250,7 +6250,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0, b: 0, a: 0}
-        key1: {r: 1, g: 0.29622638, b: 0.29622638, a: 0.11764706}
+        key1: {r: 1, g: 0.29622638, b: 0.29622638, a: 0.039215688}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -6279,7 +6279,7 @@ ParticleSystem:
       minGradient:
         serializedVersion: 2
         key0: {r: 0.735849, g: 0, b: 0, a: 0}
-        key1: {r: 1, g: 0.04742197, b: 0, a: 0.11764706}
+        key1: {r: 1, g: 0.04742197, b: 0, a: 0.039215688}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -6297,7 +6297,7 @@ ParticleSystem:
         atime0: 0
         atime1: 13107
         atime2: 65535
-        atime3: 0
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
@@ -9804,7 +9804,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -14575,7 +14575,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 402d92346ea72e449aebe894dcbfb7c2, type: 2}
+  - {fileID: 2100000, guid: 6df1749e0badeeb4fb7286cb23716dbe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14610,7 +14610,7 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1

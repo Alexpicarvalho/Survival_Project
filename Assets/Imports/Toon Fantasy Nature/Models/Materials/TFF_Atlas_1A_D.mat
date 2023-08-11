@@ -140,7 +140,7 @@ Material:
     - _Opacity: 0.5
     - _OpacityDepth: 6.5
     - _Outline: 0
-    - _OutlineWidth: 0.002
+    - _OutlineWidth: 0.003
     - _OutlineWidth1: 0.002
     - _OutlineWidth2: 0.001
     - _Parallax: 0.02

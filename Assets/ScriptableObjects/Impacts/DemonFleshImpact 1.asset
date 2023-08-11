@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3ff9ef88c009148b2e182029c26d5b, type: 3}
+  m_Name: DemonFleshImpact 1
+  m_EditorClassIdentifier: 
+  _materialType: Flesh
+  _impactVFXs:
+  - {fileID: 3730029514053188332, guid: fed9fd5d80817bf4b925646f128557dc, type: 3}
+  _impactSFXs:
+  - {fileID: 8300000, guid: 4efc7a17b2bb4b54cb6438120b165080, type: 3}
+  - {fileID: 8300000, guid: 0cf45d2cdda91f24dbe5672f9d02e4f1, type: 3}
+  - {fileID: 8300000, guid: 0285a9e0dc14e80458e68d824a85edec, type: 3}
+  - {fileID: 8300000, guid: 0b6ed72ca31eace45976f1718b371831, type: 3}
