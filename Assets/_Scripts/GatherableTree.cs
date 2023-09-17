@@ -52,7 +52,7 @@ public class GatherableTree : MonoBehaviour, IGatherable
 
     public void Gather(HitInfo info)
     {
-        _hitVFX.Play();
+        if(_hitVFX) _hitVFX.Play();
         _currentHits++;
         if (_currentHits == _hitsToFall) Fall(info);
     }
